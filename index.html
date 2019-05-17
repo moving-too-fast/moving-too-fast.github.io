@@ -3,23 +3,33 @@
 <head>
     <style>
         * {
-            margin: 0;
             padding: 0;
+            margin: 0;
         }
-        .imgbox {
-            display: grid;
-            height: 100%;
+        .fit { /* set relative picture size */
+            max-width: 100%;
+            max-height: 100%;
         }
-        .center-fit {
-            max-width: 80%;
-            max-height: 100vh;
+        .center {
+            display: block;
             margin: auto;
         }
     </style>
 </head>
 <body>
-<div class="imgbox">
-    <img class="center-fit" src='https://github.com/moving-too-fast/moving-too-fast.github.io/blob/master/Artboard@3x.png'>
-</div>
+
+<img class="center fit" src="https://github.com/moving-too-fast/moving-too-fast.github.io/blob/master/Artboard@3x.png" >
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" language="JavaScript">
+    function set_body_height() { // set body height = window height
+        $('body').height($(window).height());
+    }
+    $(document).ready(function() {
+        $(window).bind('resize', set_body_height);
+        set_body_height();
+    });
+</script>
+
 </body>
 </html>
