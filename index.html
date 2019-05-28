@@ -15,10 +15,26 @@
             margin: auto;
         }
     </style>
+    
 </head>
 <body>
 
+    <!--original--> 
 <img class="center fit" src="https://github.com/moving-too-fast/moving-too-fast.github.io/blob/master/Artboard@2x.png?raw=true" >
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" language="JavaScript">
+    function set_body_height() { // set body height = window height
+        $('body').height($(window).height());
+    }
+    $(document).ready(function() {
+        $(window).bind('resize', set_body_height);
+        set_body_height();
+    });
+    
+    
+    <!--2-->       
+    <img class="center fit" src="https://github.com/moving-too-fast/moving-too-fast.github.io/blob/master/pill.png" >
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" language="JavaScript">
